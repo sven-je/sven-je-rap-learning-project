@@ -1,0 +1,23 @@
+# ABAP Development Tools (Eclipse) 
+
+               .project 
+
+.classpath 
+
+.settings/	 
+
+.adt/ 
+
+               # Logs / Temp  
+
+              *.log  
+
+               *.tmp  
+
+               *.bak 
+
+               # OS 
+
+               .DS_Store 
+
+               Thumbs.db 
