@@ -1,0 +1,79 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'TravelID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Description'
+annotate view ZC_RAP100_ATRAV512 with
+{
+  @UI.facet: [
+    { label: 'General Information', id: 'GeneralInfo',  purpose: #STANDARD, position: 10, type: #IDENTIFICATION_REFERENCE },
+    { label: 'Dates & Pricing',     id: 'DatesPricing', purpose: #STANDARD, position: 20, type: #IDENTIFICATION_REFERENCE }
+  ]
+
+  // ---- Filters (Selection Fields) ----
+  @UI.selectionField: [ { position: 10 } ]
+  @UI.lineItem:       [ { position: 10 } ]
+  @UI.identification: [ { position: 10 } ]
+  TravelID;
+
+  @UI.selectionField: [ { position: 20 } ]
+  @UI.lineItem:       [ { position: 20 } ]
+  @UI.identification: [ { position: 20 } ]
+  AgencyID;
+
+  @UI.selectionField: [ { position: 30 } ]
+  @UI.lineItem:       [ { position: 30 } ]
+  @UI.identification: [ { position: 30 } ]
+  CustomerID;
+
+  @UI.selectionField: [ { position: 40 } ]
+  @UI.lineItem:       [ { position: 70 } ]
+  @UI.identification: [ { position: 90 } ]
+  OverallStatus;
+
+  // ---- Dates & Pricing (no filters) ----
+  @UI.lineItem:       [ { position: 40 } ]
+  @UI.identification: [ { position: 40 } ]
+  BeginDate;
+
+  @UI.lineItem:       [ { position: 50 } ]
+  @UI.identification: [ { position: 50 } ]
+  EndDate;
+
+  @UI.identification: [ { position: 60 } ]
+  BookingFee;
+
+  @UI.lineItem:       [ { position: 60 } ]
+  @UI.identification: [ { position: 60 } ]
+  TotalPrice;
+
+  // ---- Description only on Object Page + optionally in list ----
+  @UI.lineItem:       [ { position: 80 } ]
+  @UI.identification: [ { position: 80 } ]
+  Description;
+
+  // ---- Hide technical fields from filter + list (keep in object page if you want) ----
+  @UI.identification: [ { position: 200 } ]
+  Attachment;
+
+  @UI.identification: [ { position: 210 } ]
+  FileName;
+
+  @UI.identification: [ { position: 220 } ]
+  MimeType;
+
+  @UI.identification: [ { position: 230 } ]
+  CreatedBy;
+
+  @UI.identification: [ { position: 240 } ]
+  CreatedAt;
+
+  @UI.identification: [ { position: 250 } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ { position: 260 } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ { position: 270 } ]
+  LastChangedAt;
+}
